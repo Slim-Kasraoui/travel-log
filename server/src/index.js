@@ -21,7 +21,7 @@ app.use(helmet())
 app.use(
   cors({
     origin: process.env.CORS_ORIGIN,
-  }),
+  })
 )
 app.use(express.json())
 
@@ -36,7 +36,7 @@ app.use('/api/logs', logs)
 app.use(middlewares.notFound)
 app.use(middlewares.errorHandler)
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 1337
 
 app.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`)

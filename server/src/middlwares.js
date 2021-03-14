@@ -9,7 +9,7 @@ module.exports = {
     next(error)
   },
   errorHandler : (error, req, res, next) => {
-    const statusCode = res.statusCode === 200 ? 418 : res.statusCode
+    const statusCode = res.statusCode === 200 ? 500 : res.statusCode
     res.status(statusCode)
     res.json({
       message : error.message,
